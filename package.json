@@ -3,7 +3,11 @@
     "version": "2.0.0",
     "description": "Let's Encrypt ACME client supporting the v2 API with minimal dependencies",
     "keywords": ["letsencrypt", "lets", "encrypt", "acme"],
-    "author": "Makis Tracend <makis@makesit.es>",
+    "author": "makesites",
+    "contributors": [
+      { "name": "Makis Tracend", "email": "makis@makesit.es" }
+    ],
+    "homepage": "https://github.com/makesites/letsencrypt-client-v2",
     "license": "MIT",
     "repository": {
         "type": "git",

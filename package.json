@@ -1,6 +1,6 @@
 {
     "name": "letsencrypt-client-v2",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Let's Encrypt ACME client supporting the v2 API with minimal dependencies",
     "keywords": ["letsencrypt", "lets", "encrypt", "acme"],
     "author": "makesites",

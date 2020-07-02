@@ -1,11 +1,11 @@
-# node-letsencrypt-client
+# LetsEncrypt client v2
 
 Implementation of the [ACME protocol](https://letsencrypt.github.io/acme-spec/) to request certificates from [Let's Encrypt](https://letsencrypt.org/). 
 
 ## Installation
 
 ```
-npm install letsencrypt-client
+npm install letsencrypt-client-v2
 ```
 
 ## Usage
@@ -33,10 +33,10 @@ openssl genrsa 4096 > account.key
 
 ### register()
 
-To register with Let's Encrypt, use the ```register()``` method.
+To register or login with Let's Encrypt, use the ```register()``` method.
 
 ```
-client.register().then(() => {
+client.register(email).then(() => {
     console.log("Registered successfully");
 }, (error) => {
     console.log("An error occured", error);
@@ -121,3 +121,10 @@ openssl req -new -sha256 -key domain.key -subj "/CN=yoursite.com" > domain.csr
 #for multiple domains (use this one if you want both www.yoursite.com and yoursite.com)
 openssl req -new -sha256 -key domain.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:yoursite.com,DNS:www.yoursite.com")) > domain.csr
 ```
+
+## Credits 
+
+Based on the module [letsencrypt-client](https://github.com/quentinadam/node-letsencrypt-client) by [Quentin Adam](quentinadam@gmail.com)
+
+
+

@@ -1,13 +1,13 @@
 {
-    "name": "letsencrypt-client",
-    "version": "1.0.1",
-    "description": "Let's Encrypt ACME client",
+    "name": "letsencrypt-client-v2",
+    "version": "1.1.0",
+    "description": "Let's Encrypt ACME client supporting the v2 API with minimal dependencies",
     "keywords": ["letsencrypt", "lets", "encrypt", "acme"],
-    "author": "Quentin Adam <quentinadam@gmail.com>",
+    "author": "Makis Tracend <makis@makesit.es>",
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/quentinadam/node-letsencrypt-client.git"
+        "url": "https://github.com/makesites/letsencrypt-client-v2.git"
     },
     "main": "index.js",
     "dependencies": {

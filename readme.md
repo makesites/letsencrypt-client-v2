@@ -10,7 +10,7 @@ npm install letsencrypt-client-v2
 
 ## Usage
 
-### constructor(acccountKey)
+### constructor(acccountKey, options)
 
 Create a client by providing the PEM encoded account private key.
 
@@ -31,6 +31,12 @@ To create a new private key, use the following OpenSSL command:
 openssl genrsa 4096 > account.key
 ```
 
+#### Options 
+
+* **email**: account email to login
+* **staging**: use the staging API (instead)
+  
+
 ### register()
 
 To register or login with Let's Encrypt, use the ```register()``` method.
@@ -44,6 +50,18 @@ client.register(email).then(() => {
 ```
 
 This method returns a standard ES6 Promise.
+
+Note: If an email is passed in the constructor options the client will try to call this method automatically.
+
+### start(domains)
+
+Initiate an order for the domain variations of an SSL certificate.
+```
+let domains = ['www.domain.com', 'domain.com'];
+client.start(domains).then(function(){
+  // loop through all domains
+});
+```
 
 ### requestAuthorization(domain)
 

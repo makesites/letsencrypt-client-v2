@@ -86,8 +86,13 @@ The resulting ```challenge``` object will contain a ```path``` key with the path
 Once the HTTP server has been configured to respond with the correct value, use the ```triggerChallenge(challenge)``` method to trigger the challenge. Pass the challenge object from the ```requestAuthorization(domain)``` method.
 
 ```
-client.triggerChallenge(challenge).then(() => {
+client.triggerChallenge(challenge).then((res) => {
     console.log("Challenge triggered successfully");
+    // poll url is in the response
+    challenge.poll = res.url;
+    // no need to poll if already valid, continue to the next domain (check if any left in the order)
+    if(res.status == "valid") return;
+    // otherwhise check the challenge with: client.checkChallenge(challenge)...
 }, (error) => {
     console.log("An error occured", error);
 });

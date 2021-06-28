@@ -1,6 +1,6 @@
 # LetsEncrypt client v2
 
-Implementation of the [ACME protocol](https://letsencrypt.github.io/acme-spec/) to request certificates from [Let's Encrypt](https://letsencrypt.org/). 
+Implementation of the [ACME protocol](https://letsencrypt.github.io/acme-spec/) to request certificates from [Let's Encrypt](https://letsencrypt.org/). Supporting LetsEncrypt's v2 API with minimal dependencies
 
 ## Installation
 
